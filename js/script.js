@@ -27,7 +27,10 @@ var app = new Vue(
                 this.tasks.splice(index,1);
             },
             addNewTask: function() {
-                this.tasks.push({task: this.newTask, completed: false});
+                if (this.newTask.length > 0) {
+                    this.tasks.push({task: this.newTask, completed: false});
+                }
+                this.newTask = '';
             },
             toggleCompleted: function(index) {                
                 if (this.tasks[index].completed) {
