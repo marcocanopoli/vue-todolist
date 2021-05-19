@@ -17,7 +17,14 @@
                     placeholder="New task">
             <button @click="addNewTask">Add task</button>
             <ul v-if="tasks.length > 0">
-                <li v-for="(element, index) in tasks">{{ element.task }}<i class="far fa-times-circle" @click="removeItem(index)"></i></li>
+                <li v-for="(element, index) in tasks">
+                    <span @click="toggleCompleted(index)">
+                        <span v-if="tasks[index].completed == false">{{ element.task }}</span>
+                        <span v-else class="line-through">{{ element.task }}</span>
+                    </span>
+                    <i  class="far fa-times-circle" 
+                        @click="removeItem(index)"></i>
+                </li>
             </ul>
             <h1 v-else>Non ci sono compiti da svolgere!</h1>
         </div>

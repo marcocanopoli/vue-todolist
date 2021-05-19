@@ -14,3 +14,11 @@ body {
     margin-top: 100px;
 }
 
+ul li span,
+ul li i {
+    cursor: pointer;
+}
+
+.line-through {
+    text-decoration: line-through red;
+}
