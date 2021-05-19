@@ -7,10 +7,12 @@
 body {
     display: flex;
     font-family: 'Roboto', sans-serif;
+    background-color: paleturquoise;
 }
 
 main {
     width: 800px;
+    height: 800px;
     margin: auto;    
     margin-top: 100px;
     font-size: 30px;
@@ -26,14 +28,17 @@ h1 {
 
 h2 {
     font-size: 30px;
+    color: tomato;
 }
 
-input,
-button {
-    padding: 5px;
+input {
+    padding: 5px 10px;
     margin-bottom: 25px; 
+    border-radius: 10px;
+    border: none;
+    outline: none;
     font-size: 20px;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 ul li span,
@@ -45,7 +50,7 @@ ul li i {
 
 ul li i {
     margin-left: 5px;
-    color: red
+    color: tomato
 }
 ul li i:hover {
     text-shadow: 0 0 2px rgba(255, 0, 0, 0.5);
@@ -56,10 +61,18 @@ ul li i:hover {
     padding: 20px 0 20px 150px;
 }
 
-
-/* .line-through {
-    text-decoration: line-through red;
-} */
+#root > span {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: forestgreen;
+    cursor: pointer;
+}
+#root > span:hover {
+    background-color: steelblue;
+}
 
 .line-through {
     position: relative;

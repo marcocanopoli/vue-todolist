@@ -19,7 +19,7 @@
                         v-model="newTask" 
                         type="text" 
                         placeholder="New task">
-                <button @click="addNewTask">Add task</button>
+                <span @click="addNewTask">Add task</span>
                 <ul v-if="tasks.length > 0">
                     <li v-for="(element, index) in tasks">
                         <span @click="toggleCompleted(index)">
